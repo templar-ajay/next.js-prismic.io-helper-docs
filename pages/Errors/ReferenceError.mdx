@@ -1,0 +1,13 @@
+# Reference Error could not find document with reference id 'zdaDGAeGAgeghe'
+
+## Causes
+
+1. While cloning a Prismic document in another locale, some of the links in the document were of type "link_to_document" and they are still pointing to documents in another locale.
+
+2. Link of type "link_to_document" in the webpage (in which this error is occuring at build time) is pointing to a document that has been archived.
+
+## Solution
+
+1. remove the "link_to_document" type link references after copying a document in another locale
+
+2. unarchive any accidentally archived documents.
